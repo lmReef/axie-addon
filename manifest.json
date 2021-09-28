@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Axie Addon",
+  "version": "1.0",
+
+  "permissions": ["*://*.marketplace.axieinfinity.com/*", "activeTab"],
+
+  "description": "Extention for Axie Infinity Marketplace.",
+
+  "icons": {
+    "48": "icons/slp.png"
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+      "16": "icons/slp.png",
+      "32": "icons/slp.png"
+    }
+  },
+
+  "background": {
+    "scripts": ["Background.js"]
+  }
+}
