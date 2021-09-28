@@ -9,11 +9,17 @@ const onError = (e) => {
 };
 
 const run = () => {
-  const executing = browser.tabs.executeScript({
-    file: '/AxieAddon.js',
-    allFrames: true,
-  });
-  executing.then(onExecuted, onError);
+  browser.tabs.query({ currentWindow: true, active: true }).then((tabs) => {
+    const url = tabs[0].url;
+    const regex = '.*://(.*.)?marketplace.axieinfinity.com/axie/.*';
+    if (url.match(regex)) {
+      const executing = browser.tabs.executeScript({
+        file: '/AxieAddon.js',
+        allFrames: true,
+      });
+      executing.then(onExecuted, onError);
+    }
+  }, console.error);
 };
 
 browser.browserAction.onClicked.addListener(run);
