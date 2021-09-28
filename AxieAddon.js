@@ -48,14 +48,6 @@ function getParts() {
   return parts;
 }
 
-function getQuery(type, selector) {
-  const t = document.querySelectorAll(
-    'text-gray-1 font-bold leading-14 text-10 tracking-1 uppercase',
-  );
-
-  return document.querySelector(selector);
-}
-
 var queries = [getClass(), ...getParts()];
 var url = createUrl(queries);
 url;
