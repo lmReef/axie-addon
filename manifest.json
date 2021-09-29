@@ -8,13 +8,12 @@
   "description": "Extention for Axie Infinity Marketplace.",
 
   "icons": {
-    "48": "icons/slp.png"
+    "32": "icons/slp.png"
   },
 
   "browser_action": {
     "browser_style": true,
     "default_icon": {
-      "16": "icons/slp.png",
       "32": "icons/slp.png"
     }
   },
