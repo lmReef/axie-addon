@@ -5,7 +5,7 @@
 
   "permissions": ["*://*.marketplace.axieinfinity.com/*", "activeTab"],
 
-  "description": "Extention for Axie Infinity Marketplace.",
+  "description": "extension for Axie Infinity Marketplace.",
 
   "icons": {
     "32": "icons/slp.png"
