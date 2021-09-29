@@ -3,7 +3,7 @@
   "name": "Axie Addon",
   "version": "1.0",
 
-  "permissions": ["*://*.marketplace.axieinfinity.com/*", "activeTab"],
+  "permissions": ["activeTab"],
 
   "description": "extension for Axie Infinity Marketplace.",
 
