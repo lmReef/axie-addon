@@ -27,7 +27,6 @@ const run = () => {
     } else if (!url.match(regexMarket)) {
       browser.tabs.create({
         url: 'https://marketplace.axieinfinity.com/axie',
-        index: tabs[0].index + 1,
       });
     }
   }, console.error);
