@@ -15,13 +15,20 @@ const run = () => {
   browser.tabs.query({ currentWindow: true, active: true }).then((tabs) => {
     console.log(`index: ${tabs[0].index}`);
     const url = tabs[0].url;
-    const regex = '.*://(.*.)?marketplace.axieinfinity.com/axie/[0-9]*';
-    if (url.match(regex)) {
+    const regexAxie = '.*://(.*.)?marketplace.axieinfinity.com/axie/[0-9]*';
+    const regexMarket = '.*://(.*.)?marketplace.axieinfinity.com/';
+
+    if (url.match(regexAxie)) {
       const executing = browser.tabs.executeScript({
         file: '/AxieAddon.js',
         allFrames: true,
       });
       executing.then(onExecuted, onError);
+    } else if (!url.match(regexMarket)) {
+      browser.tabs.create({
+        url: 'https://marketplace.axieinfinity.com/axie',
+        index: tabs[0].index + 1,
+      });
     }
   }, console.error);
 };
