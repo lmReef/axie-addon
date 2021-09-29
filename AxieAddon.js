@@ -17,32 +17,26 @@ function getParts() {
   let parts = [];
   let i = 0;
   partsEle.forEach((part) => {
-    let query = '&part=';
-    switch (i) {
-      case 0:
-        query += 'eyes-';
-        break;
-      case 1:
-        query += 'ears-';
-        break;
-      case 2:
-        query += 'back-';
-        break;
-      case 3:
-        query += 'mouth-';
-        break;
-      case 4:
-        query += 'horn-';
-        break;
-      case 5:
-        query += 'tail-';
-        break;
+    let query = '';
 
-      default:
-        break;
+    if (i === 0) {
+      // query += '&part=eyes-';
+    } else if (i === 1) {
+      // query += '&part=ears-';
+    } else if (i === 2) {
+      query += '&part=back-';
+    } else if (i === 3) {
+      query += '&part=mouth-';
+    } else if (i === 4) {
+      query += '&part=horn-';
+    } else if (i === 5) {
+      query += '&part=tail-';
     }
-    const name = part.innerText.toLowerCase().replace(' ', '-');
-    parts.push(query + name);
+
+    if (query) {
+      const name = part.innerText.toLowerCase().replace(' ', '-');
+      parts.push(query + name);
+    }
     i++;
   });
   return parts;
