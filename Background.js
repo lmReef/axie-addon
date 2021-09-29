@@ -1,5 +1,6 @@
 const onExecuted = (result) => {
   browser.tabs.query({ currentWindow: true, active: true }).then((tabs) => {
+    console.log(`url: ${result[0]}`);
     browser.tabs.create({
       url: result[0],
       index: tabs[0].index + 1,
@@ -26,7 +27,7 @@ const run = () => {
       executing.then(onExecuted, onError);
     } else if (!url.match(regexMarket)) {
       browser.tabs.create({
-        url: 'https://marketplace.axieinfinity.com/axie',
+        url: 'https://marketplace.axieinfinity.com/',
       });
     }
   }, console.error);
