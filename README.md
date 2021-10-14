@@ -19,3 +19,8 @@ Could potentially be expanded on if any ideas.
 ### Planned
 
 - ~~Chrome~~
+
+### Support
+If you find the addon useful consider sending me a small tip (obviously optional):
+- Ronin: ronin:ba79d7f15b9c17570d77e70cac4b5fd3838083ea
+- MetaMask: 0x0235C9D8413b4807602468Ed363dfAa8A1c5Cde2
