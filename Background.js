@@ -17,7 +17,7 @@ const run = () => {
     console.log(`index: ${tabs[0].index}`);
     const url = tabs[0].url;
     const regexAxie = '.*://(.*.)?marketplace.axieinfinity.com/axie/[0-9]*';
-    const regexMarket = '.*://(.*.)?marketplace.axieinfinity.com/';
+    // const regexMarket = '.*://(.*.)?marketplace.axieinfinity.com/';
 
     if (url.match(regexAxie)) {
       const executing = browser.tabs.executeScript({
@@ -25,7 +25,7 @@ const run = () => {
         allFrames: true,
       });
       executing.then(onExecuted, onError);
-    } else if (!url.match(regexMarket)) {
+    } else {
       browser.tabs.create({
         url: 'https://marketplace.axieinfinity.com/',
       });
