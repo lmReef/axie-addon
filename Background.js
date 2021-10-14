@@ -21,7 +21,7 @@ const run = () => {
 
     if (url.match(regexAxie)) {
       const executing = browser.tabs.executeScript({
-        file: '/AxieAddon.js',
+        file: '/axieAddon.js',
         allFrames: true,
       });
       executing.then(onExecuted, onError);
