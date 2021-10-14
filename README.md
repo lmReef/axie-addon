@@ -14,7 +14,8 @@ Could potentially be expanded on if any ideas.
 ### Current
 
 - Firefox
+- Chrome
 
 ### Planned
 
-- Chrome
+- ~~Chrome~~
