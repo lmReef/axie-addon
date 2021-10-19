@@ -7,14 +7,16 @@ Addon for Axie Infinity Marketplace.
 - Clicking on the extension button while viewing an axie will open a search in a new tab with that axie's class + parts.
 - Clicking on the extension button while not viewing an axie opens the site (https://marketplace.axieinfinity.com/) in a new tab.
 
+Video showing how to use the addon: https://youtu.be/ZbzstU5w-M4
+
 Could potentially be expanded on if any ideas.
 
 ## Browsers
 
 ### Current
 
-- Firefox
-- Chrome
+- Firefox: https://addons.mozilla.org/en-US/firefox/addon/axie-addon/
+- Chrome: https://chrome.google.com/webstore/detail/axie-addon/ehmmohmdikjlaaekfmnahkbffjbdpnog
 
 ### Planned
 
